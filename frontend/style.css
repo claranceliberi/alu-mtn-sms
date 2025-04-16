@@ -9,4 +9,118 @@ tr:hover { background: #f5f5f5; }
 .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background: rgba(0,0,0,0.4); }
 .modal-content { background: #fff; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 80%; }
 .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
-.close:hover { color: #000; }
+.modal-content .transaction-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: inherit;
+}
+.modal-content .transaction-card h3 {
+    margin-top: 0;
+    color: #4e79a7;
+    text-align: center;
+}
+.modal-content .transaction-card dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 8px 16px;
+    margin: 0;
+}
+.modal-content .transaction-card dt {
+    font-weight: bold;
+    color: #555;
+}
+.modal-content .transaction-card dd {
+    margin: 0 0 8px 0;
+    color: #222;
+    word-break: break-word;
+    white-space: pre-line;
+    max-width: 320px;
+}
+.modal-content .transaction-card .missing-info {
+    color: #a94442;
+    font-weight: bold;
+    display: inline-block;
+}
+.modal-content .transaction-card .badge {
+    background: #ffe0e0;
+    color: #a94442;
+    border-radius: 8px;
+    padding: 2px 8px;
+    font-size: 0.85em;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+.tab {
+    background: #f1f1f1;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #444;
+    transition: background 0.2s, color 0.2s;
+}
+.tab.active {
+    background: #4e79a7;
+    color: #fff;
+    font-weight: bold;
+}
+#chartsTab { display: none; }
+
+.missing-info {
+    color: #a94442;
+    font-weight: bold;
+    display: inline-block;
+}
+.badge {
+    background: #ffe0e0;
+    color: #a94442;
+    border-radius: 8px;
+    padding: 2px 8px;
+    font-size: 0.85em;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 18px 0 0 0;
+}
+.pagination-controls button {
+    padding: 5px 14px;
+    border: none;
+    background: #4e79a7;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.pagination-controls button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.charts canvas {
+    width: 400px !important;
+    height: 300px !important;
+    max-width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 0 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    display: inline-block;
+}
