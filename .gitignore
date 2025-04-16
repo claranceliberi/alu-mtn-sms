@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# SQLite database
+*.db
+*.sqlite3
+
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / web server
+node_modules/
+
+# Poetry
+poetry.lock
+
+# VSCode
+.vscode/
