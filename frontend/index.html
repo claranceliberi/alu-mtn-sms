@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoMo Data Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>MoMo SMS Data Dashboard</h1>
+    <div class="filters">
+        <label>Type:
+            <select id="typeFilter">
+                <option value="">All</option>
+            </select>
+        </label>
+        <label>Date:
+            <input type="date" id="dateFilter">
+        </label>
+        <label>Amount:
+            <input type="number" id="amountFilter" placeholder="Min amount">
+        </label>
+        <button id="resetFilters">Reset</button>
+    </div>
+    <div class="charts">
+        <canvas id="typeChart"></canvas>
+        <canvas id="monthlyChart"></canvas>
+    </div>
+    <h2>Transactions</h2>
+    <table id="transactionsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Sender</th>
+                <th>Receiver</th>
+                <th>Date</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <pre id="detailsContent"></pre>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
